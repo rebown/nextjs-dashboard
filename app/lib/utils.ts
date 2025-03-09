@@ -68,9 +68,9 @@ export const generatePagination = (currentPage: number, totalPages: number) => {
   ];
 };
 
-export function debounce(func: (...args: any[]) => void, wait: number) {
+export function debounce(func: (...args: any[]) => void, wait: number) { // eslint-disable-line @typescript-eslint/no-explicit-any
   let timeout: NodeJS.Timeout;
-  return function executedFunction(...args: any[]) {
+  return function executedFunction(...args: any[]) { // eslint-disable-line @typescript-eslint/no-explicit-any
     const later = () => {
       clearTimeout(timeout);
       func(...args);
